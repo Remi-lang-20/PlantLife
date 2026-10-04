@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PLANTLIFE</title>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#F4F7F1;--cd:#fff;--bd:#E1E8DE;--tx:#17261E;--mu:#53645A;--g1:#1F4D3A;--g2:#2F7A4D;--tn:#DDEEDD;--y:#F2B84B;--yb:#F6E7C8;--bl:#E3EEF3;--pt:#1F4D3A}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101A14;--cd:#18271E;--bd:#2A3B30;--tx:#E8F0EA;--mu:#A3B6AA;--tn:#24402F;--yb:#4A3A14;--bl:#1E3440;--pt:#9FD6B2}}
+:root[data-theme="dark"]{--bg:#101A14;--cd:#18271E;--bd:#2A3B30;--tx:#E8F0EA;--mu:#A3B6AA;--tn:#24402F;--yb:#4A3A14;--bl:#1E3440;--pt:#9FD6B2}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:Quicksand,system-ui,sans-serif}
+h1,h2,p{margin:0}h1{font-size:26px;line-height:1.15}h2{font-size:17px}
+.w{max-width:430px;margin:0 auto;min-height:100vh;box-sizing:border-box;padding:20px 18px 110px;display:flex;flex-direction:column;gap:16px;position:relative}
+.c{align-items:center;justify-content:center;text-align:center}
+.g{background:#1F4D3A;color:#fff}.dk{background:#14231B;color:#fff}
+.cd{background:var(--cd);border:1px solid var(--bd);border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:12px}
+.gc{background:#1F4D3A;color:#fff;border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:12px}
+.r{display:flex;gap:12px;align-items:center}.sb{justify-content:space-between}
+.m{font-size:13px;color:var(--mu)}.gc .m{color:#CFE3D4}
+.btn{background:var(--g2);color:#fff;border:0;border-radius:16px;min-height:52px;font:700 16px Quicksand,sans-serif;width:100%;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer}
+.btn.o{background:transparent;color:var(--pt);border:2px solid var(--pt)}
+.btn.s{width:auto;min-height:44px;padding:0 18px;border-radius:22px}
+.in{display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600;width:100%;text-align:left}
+input,select,textarea{height:52px;border:1.5px solid var(--bd);border-radius:14px;background:var(--cd);color:var(--tx);padding:0 16px;font:500 15px Quicksand,sans-serif;box-sizing:border-box;width:100%}
+textarea{height:90px;padding:12px 16px;resize:none}
+.nv{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(12px + env(safe-area-inset-bottom,0px));width:min(398px,calc(100% - 24px));height:68px;border-radius:24px;background:var(--cd);border:1px solid var(--bd);display:flex;box-shadow:0 6px 20px rgba(0,0,0,.12)}
+.nv button{flex:1;background:none;border:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;font:600 11px Quicksand,sans-serif;color:var(--mu);cursor:pointer}
+.nv .on{color:var(--pt);font-weight:700}
+.ic{display:inline-flex;align-items:center;justify-content:center}
+.ic svg{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.nv .ic{width:46px;height:30px;border-radius:15px}.nv .on .ic{background:var(--tn)}
+.pill{border-radius:20px;padding:4px 10px;font-size:12px;font-weight:700;background:var(--tn);color:var(--pt);white-space:nowrap}
+.chip{border:1.5px solid var(--bd);border-radius:20px;padding:0 14px;min-height:44px;font:600 13px Quicksand,sans-serif;background:var(--cd);color:var(--tx);cursor:pointer;white-space:nowrap}
+.chip.on{background:var(--g1);color:#fff;border-color:var(--g1)}
+.bar{height:10px;border-radius:5px;background:rgba(127,150,135,.3)}.bar b{display:block;height:10px;border-radius:5px;background:var(--y)}
+.rd{border-radius:999px}
+.ci{width:40px;height:40px;border-radius:12px;background:var(--tn);color:var(--pt);flex-shrink:0}
+.av{width:36px;height:36px;background:var(--tn);color:var(--pt);font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ib{width:44px;height:44px;border:0;background:var(--cd);color:var(--pt);display:flex;align-items:center;justify-content:center;cursor:pointer}
+.th{background:var(--tn);border-radius:16px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.th img,.th svg{width:100%;height:100%;object-fit:cover}
+.pc .th{aspect-ratio:1;height:auto!important}
+.sc{overflow-x:auto;display:flex;gap:10px;padding-bottom:4px}
+.pc{min-width:116px;padding:8px;border:1px solid var(--bd);background:var(--cd);border-radius:18px;text-align:left;cursor:pointer;color:var(--tx);font:600 14px Quicksand,sans-serif;display:flex;flex-direction:column;gap:6px}
+.tk{background:none;border:0;padding:0;display:flex;align-items:center;gap:12px;width:100%;color:inherit;font:600 15px Quicksand,sans-serif;text-align:left;min-height:44px;cursor:pointer}
+.ck{width:26px;height:26px;border:2px solid #CFE3D4;box-sizing:border-box;display:flex;align-items:center;justify-content:center;color:#17261E;flex-shrink:0}
+.ck.d{background:var(--y);border-color:var(--y)}
+.lk{background:none;border:0;color:var(--pt);font:600 13px Quicksand,sans-serif;text-decoration:underline;cursor:pointer;min-height:44px}
+.fab{position:fixed;right:max(22px,calc(50% - 193px));bottom:calc(92px + env(safe-area-inset-bottom,0px));box-shadow:0 6px 16px rgba(0,0,0,.3)}
+.mo{position:fixed;inset:0;background:rgba(0,0,0,.5);display:flex;align-items:flex-end;justify-content:center;z-index:9}
+.mo>div{width:100%;max-width:430px;background:var(--bg);border-radius:24px 24px 0 0;padding:20px 18px calc(20px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:12px;box-sizing:border-box;max-height:90vh;overflow:auto}
+.ts{position:fixed;left:50%;top:calc(16px + env(safe-area-inset-top,0px));transform:translateX(-50%);background:var(--g1);color:#fff;padding:10px 18px;border-radius:20px;font-weight:600;font-size:14px;z-index:20}
+.vf{position:relative;height:min(470px,56vh);border-radius:28px;background:#1F3A2C;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.vf img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cn{position:absolute;width:44px;height:44px;border:4px solid var(--y)}
+.k1{top:24px;left:24px;border-right:0;border-bottom:0;border-radius:16px 0 0 0}.k2{top:24px;right:24px;border-left:0;border-bottom:0;border-radius:0 16px 0 0}.k3{bottom:24px;left:24px;border-right:0;border-top:0;border-radius:0 0 0 16px}.k4{bottom:24px;right:24px;border-left:0;border-top:0;border-radius:0 0 16px 0}
+.rb{width:52px;height:52px;border:0;background:rgba(255,255,255,.16);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.sh{width:76px;height:76px;border:4px solid #fff;background:var(--y);box-shadow:inset 0 0 0 4px #14231B;cursor:pointer}
+.bd{display:flex;flex-direction:column;align-items:center;gap:6px;width:100px;font-size:12px;font-weight:600;text-align:center}
+.bd .rd{width:64px;height:64px}
+</style></head><body><div id="app"></div>
+<script>
+const $=s=>document.querySelector(s),K='plantlife.v1',H=36e5;
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const P={home:'<path d="M3 11l9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/>',cam:'<path d="M4 8h3l2-3h6l2 3h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="14" r="4"/>',chat:'<path d="M4 5h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H10l-5 4v-4H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z"/>',user:'<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/>',drop:'<path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/>',sun:'<circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/>',th:'<path d="M10 14V5a2 2 0 0 1 4 0v9a4 4 0 1 1-4 0z"/>',hum:'<path d="M3 9c3-3 6 3 9 0s6 3 9 0M3 15c3-3 6 3 9 0s6 3 9 0"/>',ok:'<path d="M5 12l5 5 9-10"/>',back:'<path d="M15 5l-7 7 7 7"/>',img:'<rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="2"/><path d="M4 18l6-5 4 3 3-2 3 3"/>',heart:'<path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.5A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z"/>',leaf:'<path d="M5 19c0-9 5-14 14-14 0 9-5 14-14 14zM5 19l8-8"/>',star:'<path d="M12 3l2.7 5.6 6.1.8-4.5 4.2 1.1 6.1L12 16.8l-5.4 2.9 1.1-6.1L3.2 9.4l6.1-.8z"/>',plus:'<path d="M12 5v14M5 12h14"/>',x:'<path d="M6 6l12 12M18 6L6 18"/>'};
+const ic=(n,s=22)=>`<span class="ic"><svg width="${s}" height="${s}" viewBox="0 0 24 24" aria-hidden="true">${P[n]}</svg></span>`;
+const PLANT='<svg viewBox="0 0 100 100" aria-hidden="true" style="object-fit:contain;padding:6%"><path d="M50 74C50 56 50 42 50 24" stroke="#2F7A4D" stroke-width="3" fill="none"/><ellipse cx="36" cy="48" rx="16" ry="7" transform="rotate(-30 36 48)" fill="#3E8E5C"/><ellipse cx="64" cy="40" rx="16" ry="7" transform="rotate(30 64 40)" fill="#58A874"/><ellipse cx="40" cy="28" rx="12" ry="6" transform="rotate(-50 40 28)" fill="#2F7A4D"/><ellipse cx="60" cy="58" rx="13" ry="6" transform="rotate(25 60 58)" fill="#2F7A4D"/><path d="M33 72h34l-5 23H38z" fill="#C97B4A"/></svg>';
+const pic=(p,sz)=>`<div class="th" style="width:${sz};height:${sz}">${p.img?`<img src="${p.img}" alt="${esc(p.n)}">`:PLANT}</div>`;
+const CAT=[
+{n:'Monstera',s:'Monstera deliciosa',w:7,l:'Luz indirecta brillante',t:'18–27 °C',h:'60 % o más',b:['Decora y da vida a los espacios','Aumenta la humedad ambiental','Fácil de cuidar para principiantes']},
+{n:'Pothos',s:'Epipremnum aureum',w:7,l:'Luz indirecta media',t:'15–30 °C',h:'40–60 %',b:['Crece rápido y es muy resistente','Ideal para colgar o trepar','Se reproduce fácil en agua']},
+{n:'Lengua de suegra',s:'Dracaena trifasciata',w:14,l:'Luz media a baja',t:'15–30 °C',h:'Baja (30–50 %)',b:['Tolera el descuido y la poca luz','Aspecto moderno y decorativo','Necesita poco riego']},
+{n:'Helecho de Boston',s:'Nephrolepis exaltata',w:3,l:'Luz indirecta suave',t:'16–24 °C',h:'Alta (60 %+)',b:['Follaje denso y decorativo','Aporta frescura al ambiente','No es tóxico para mascotas']},
+{n:'Aloe vera',s:'Aloe vera',w:14,l:'Mucha luz, algo de sol',t:'13–27 °C',h:'Baja (30–40 %)',b:['Muy resistente a la sequía','Compacta y fácil de mantener','Se propaga con hijuelos']},
+{n:'Cactus',s:'Cactaceae',w:21,l:'Sol directo',t:'10–30 °C',h:'Baja (20–40 %)',b:['Requiere muy poco riego','Ideal para espacios soleados','Larga vida con poco cuidado']}];
+const seed=()=>[
+{id:1,a:'María P.',tag:'Pregunta',t:'¿Por qué mi Monstera tiene hojas amarillas?',x:'La riego una vez por semana y está cerca de la ventana.',ts:Date.now()-2*H,n:24,lk:0,r:[]},
+{id:2,a:'Luis G.',tag:'Consejo',t:'Cómo reproducir pothos en agua, paso a paso',x:'Corta debajo de un nudo, sumerge solo el tallo y cambia el agua cada semana.',ts:Date.now()-5*H,n:41,lk:0,r:[]},
+{id:3,a:'Carla R.',tag:'Foto',t:'Mi helecho después de un mes junto a la ventana',x:'¡Ya sacó hojas nuevas!',ts:Date.now()-30*H,n:63,lk:0,r:[]}];
+let S=(()=>{try{const d=JSON.parse(localStorage.getItem(K));if(d)return d}catch(e){}return{user:'',plants:[],pts:0,waters:0,scans:0,days:[],posts:seed()}})();
+const save=()=>{try{localStorage.setItem(K,JSON.stringify(S))}catch(e){}};
+let scr='splash',T='home',D=null,sc={st:'idle'},F='Todos',Q='',O={},M=0,ctl=null;
+const day=()=>new Date().toDateString();
+const dn=p=>p.last&&new Date(p.last).toDateString()===day();
+const due=p=>!p.last||(Date.now()-p.last)/864e5>=p.w;
+const nxt=p=>Math.max(1,Math.ceil(p.w-(Date.now()-p.last)/864e5));
+const streak=()=>{let s=0,d=new Date();if(!S.days.includes(d.toDateString()))d.setDate(d.getDate()-1);while(S.days.includes(d.toDateString())){s++;d.setDate(d.getDate()-1)}return s};
+const lv=()=>Math.floor(S.pts/100)+1;
+const ago=t=>{const h=Math.floor((Date.now()-t)/H);return h<1?'Ahora':h<24?`Hace ${h} h`:h<48?'Ayer':`Hace ${Math.floor(h/24)} días`};
+const toast=m=>{const e=document.createElement('div');e.className='ts';e.textContent=m;document.body.append(e);setTimeout(()=>e.remove(),2200)};
+const mine=()=>S.posts.filter(p=>p.a===S.user).length;
+function badges(){return[['Primer riego',S.waters>=1,'drop'],['Racha 7 días',streak()>=7,'sun'],['5 plantas',S.plants.length>=5,'leaf'],['Fotógrafo',S.scans>=1,'cam'],['Colaborador',mine()>=1,'chat'],['Experto',lv()>=5,'star']]}
+function nav(){return'<nav class="nv">'+[['home','Inicio'],['cam','Escanear'],['chat','Comunidad'],['user','Perfil']].map(([i,n],k)=>{const t=['home','scan','forum','prof'][k];return`<button data-a="tab" data-v="${t}" class="${T===t?'on':''}">${ic(i)}${n}</button>`}).join('')+'</nav>'}
+function home(){
+const ts=S.plants.filter(p=>dn(p)||due(p)),dd=ts.filter(dn).length,pc=ts.length?Math.round(dd/ts.length*100):100;
+return`<div class="r sb"><div><p class="m">Buenos días</p><h1>Hola, ${esc(S.user)}</h1></div><div class="av rd" style="width:44px;height:44px;background:var(--g1);color:#fff">${esc(S.user[0].toUpperCase())}</div></div>
+<div class="gc"><div class="r sb"><h2>Cuidados de hoy</h2><span class="pill" style="background:var(--y);color:#17261E">${ts.length?dd+' de '+ts.length:'Al día'}</span></div><div class="bar"><b style="width:${pc}%"></b></div>
+${ts.length?ts.slice(0,4).map(p=>`<button class="tk" data-a="water" data-v="${p.id}" ${dn(p)?'disabled':''} aria-label="Regar ${esc(p.n)}"><span class="ck rd ${dn(p)?'d':''}">${dn(p)?ic('ok',16):''}</span><span style="flex:1">Regar ${esc(p.n)}</span></button>`).join(''):`<p class="m">${S.plants.length?'Todas tus plantas están hidratadas.':'Aún no tienes plantas. Identifica la primera.'}</p>`}</div>
+<div class="r sb"><h2>Mis plantas</h2></div>
+${S.plants.length?`<div class="sc">${S.plants.map(p=>`<button class="pc" data-a="open" data-v="${p.id}">${pic(p,'100%').replace('class="th"','class="th" ')}<span>${esc(p.n)}</span><span class="pill" style="align-self:flex-start">${due(p)?'Regar hoy':'En '+nxt(p)+' d'}</span></button>`).join('')}</div>`:''}
+<button class="btn" data-a="tab" data-v="scan">${ic('cam')}Identificar una planta</button>`}
+function scan(){
+const busy=sc.st==='busy';
+return`<div class="r sb"><button class="ib rd" data-a="tab" data-v="home" aria-label="Cerrar">${ic('back')}</button><h2>Identificar planta</h2><span style="width:44px"></span></div>
+<div class="vf">${sc.url?`<img src="${sc.url}" alt="Tu foto">`:PLANT.replace('style="','style="width:230px;height:230px;opacity:.5;')}<i class="cn k1"></i><i class="cn k2"></i><i class="cn k3"></i><i class="cn k4"></i></div>
+${busy?`<p class="m" style="color:#CFE3D4;text-align:center">Identificando tu planta…</p><button class="btn s o" style="align-self:center;color:#fff;border-color:#fff" data-a="stop">Cancelar</button>`:
+sc.st==='err'?`<p style="text-align:center;font-size:14px">${esc(sc.msg)}</p><p class="m" style="color:#CFE3D4;text-align:center">Elige una planta de la lista:</p><div class="sc" style="flex-wrap:wrap;justify-content:center">${CAT.map((c,i)=>`<button class="chip" data-a="pick" data-v="${i}">${c.n}</button>`).join('')}</div>`:
+`<p class="m" style="color:#CFE3D4;text-align:center">Encuadra la hoja o la planta completa</p>`}
+<div class="r" style="justify-content:center;gap:36px"><button class="rb rd" data-a="gal" aria-label="Galería">${ic('img')}</button><button class="sh rd" data-a="shot" aria-label="Tomar foto"></button><span style="width:52px"></span></div>
+<input id="f1" type="file" accept="image/*" capture="environment" hidden><input id="f2" type="file" accept="image/*" hidden>`}
+function detail(){const p=D.p,rows=[['Riego','drop',`Cada ${p.w} días`],['Luz','sun',p.l],['Temperatura','th',p.t],['Humedad','hum',p.h]];
+return`<div style="margin:-20px -18px 0;height:250px;background:var(--tn);position:relative;display:flex;align-items:center;justify-content:center">${pic(p,'250px').replace('border-radius:16px','')}<button class="ib rd" data-a="back" aria-label="Volver" style="position:absolute;top:20px;left:18px">${ic('back')}</button></div>
+<div class="r sb" style="align-items:flex-start;margin-top:-4px"><div><h1>${esc(p.n)}</h1><p class="m" style="margin-top:4px;font-style:italic">${esc(p.s)}</p></div>${D.conf?`<span class="pill">${D.conf} % coincidencia</span>`:''}</div>
+<div class="cd"><h2>Beneficios</h2>${p.b.map(b=>`<div class="r"><span class="ic rd" style="width:24px;height:24px;background:var(--tn);color:var(--pt)">${ic('ok',14)}</span><span style="font-size:14px;font-weight:600">${esc(b)}</span></div>`).join('')}</div>
+<h2>Qué necesita</h2><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">${rows.map(([a,i,v])=>`<div class="cd r" style="padding:12px;gap:10px;flex-direction:row"><span class="ci ic">${ic(i)}</span><div><p class="m" style="font-size:12px">${a}</p><p style="font-size:14px;font-weight:700">${esc(v)}</p></div></div>`).join('')}</div>
+${D.isNew?`<button class="btn" data-a="add">${ic('leaf')}Agregar a mis plantas</button>`:`<button class="btn" data-a="water" data-v="${p.id}" ${dn(p)?'disabled style="opacity:.6"':''}>${ic('drop')}${dn(p)?'Regada hoy':'Regar ahora'}</button><button class="btn o" data-a="del" data-v="${p.id}">Eliminar planta</button>`}`}
+function posts(){const q=Q.toLowerCase(),L=S.posts.filter(p=>(F==='Todos'||p.tag===F)&&(!q||(p.t+p.x).toLowerCase().includes(q)));
+const col={Pregunta:'var(--yb)',Consejo:'var(--tn)',Foto:'var(--bl)'};
+return L.length?L.map(p=>`<div class="cd" style="gap:10px"><div class="r"><div class="av rd">${esc(p.a[0])}</div><div style="flex:1"><p style="font-size:14px;font-weight:700">${esc(p.a)}</p><p class="m" style="font-size:12px">${ago(p.ts)}</p></div><span class="pill" style="background:${col[p.tag]};color:var(--tx)">${p.tag}</span></div>
+<p style="font-size:15px;font-weight:700">${esc(p.t)}</p>${p.x?`<p class="m">${esc(p.x)}</p>`:''}
+<div class="r m"><button class="lk" data-a="like" data-v="${p.id}" style="text-decoration:none;display:flex;gap:4px;align-items:center;${p.lk?'font-weight:700':''}">${ic('heart',16)}${p.n+(p.lk?1:0)}</button><button class="lk" data-a="rep" data-v="${p.id}" style="text-decoration:none;display:flex;gap:4px;align-items:center">${ic('chat',16)}${p.r.length} respuestas</button></div>
+${O[p.id]?p.r.map(r=>`<p style="font-size:14px;border-top:1px solid var(--bd);padding-top:8px"><b>${esc(r.a)}</b> ${esc(r.x)}</p>`).join('')+`<div class="r"><input id="r${p.id}" placeholder="Escribe una respuesta" aria-label="Respuesta"><button class="btn s" data-a="send" data-v="${p.id}">Enviar</button></div>`:''}</div>`).join(''):'<p class="m">No hay publicaciones todavía.</p>'}
+function forum(){return`<h1>Comunidad</h1><input id="q" type="search" placeholder="Buscar en el foro" aria-label="Buscar" value="${esc(Q)}"><div class="sc">${['Todos','Pregunta','Consejo','Foto'].map(c=>`<button class="chip ${F===c?'on':''}" data-a="flt" data-v="${c}">${c==='Todos'?c:c+'s'}</button>`).join('')}</div><div id="fl" style="display:flex;flex-direction:column;gap:12px">${posts()}</div><button class="btn s fab" data-a="new">${ic('plus',18)}Nueva publicación</button>`}
+function prof(){const L=lv(),st=Math.min(5,Math.floor(S.pts/40)),nm=['Semilla','Brote','Jardinero en crecimiento','Jardinero experto','Maestro botánico'][Math.min(L-1,4)];
+return`<div class="gc"><div class="r"><div class="av rd" style="width:64px;height:64px;font-size:24px">${esc(S.user[0].toUpperCase())}</div><div><h1 style="font-size:22px">${esc(S.user)}</h1><p class="m">Nivel ${L} · ${nm}</p></div></div>
+<div class="r" style="gap:6px">${[1,2,3,4,5].map(i=>`<svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true" style="fill:${i<=st?'#F2B84B':'none'};stroke:#F2B84B;stroke-width:1.5;stroke-linejoin:round">${P.star}</svg>`).join('')}<span class="m" style="margin-left:auto">${st} de 5</span></div>
+<div class="bar"><b style="width:${S.pts%100}%"></b></div><p class="m">${S.pts%100} / 100 puntos para el nivel ${L+1}</p></div>
+<div class="r" style="align-items:stretch">${[[S.plants.length,'Plantas'],[streak(),'Días de racha'],[mine(),'Publicaciones']].map(([n,l])=>`<div class="cd" style="flex:1;align-items:center;padding:12px 6px;gap:2px"><span style="font-size:26px;font-weight:700">${n}</span><span class="m" style="text-align:center">${l}</span></div>`).join('')}</div>
+<h2>Recompensas</h2><div style="display:flex;flex-wrap:wrap;gap:14px 5px">${badges().map(([n,ok,i])=>`<div class="bd" style="opacity:${ok?1:.55}"><span class="rd ic" style="background:${ok?'var(--tn)':'rgba(127,150,135,.25)'};color:${ok?'var(--pt)':'var(--mu)'}">${ic(i,28)}</span>${n}${ok?'':'<span class="m" style="font-size:11px">Bloqueada</span>'}</div>`).join('')}</div>
+<button class="btn o" data-a="out">Cerrar sesión</button>`}
+function render(){const a=$('#app');document.body.style.background=scr==='main'&&!D&&T==='scan'?'#14231B':'';
+if(scr==='splash'){a.innerHTML=`<div class="w c g" style="gap:24px;padding-bottom:20px"><div class="th rd" style="width:180px;height:180px">${PLANT}</div><h1 style="font-size:38px;letter-spacing:2px">PLANTLIFE</h1><p style="color:#CFE3D4">Cuida, identifica y haz crecer tus plantas</p></div>`;return}
+if(scr==='login'){a.innerHTML=`<div class="w c" style="gap:18px;padding-bottom:30px"><div class="th rd" style="width:120px;height:120px">${PLANT}</div><div><h1 style="font-size:32px;letter-spacing:1.5px;color:var(--pt)">PLANTLIFE</h1><p class="m" style="margin-top:6px">Bienvenido de nuevo</p></div><label class="in">Usuario<input id="u" type="text" placeholder="Tu usuario" autocomplete="username"></label><label class="in">Contraseña<input id="pw" type="password" placeholder="Tu contraseña" autocomplete="current-password"></label><button class="btn" data-a="login">Iniciar sesión</button><p class="m">Demo: tus datos se guardan solo en este dispositivo.</p></div>`;return}
+const v=D?detail():{home,scan,forum,prof}[T]();
+a.innerHTML=`<div class="w ${!D&&T==='scan'?'dk':''}">${v}</div>${D||T==='scan'?'':nav()}${M?`<div class="mo"><div><div class="r sb"><h2>Nueva publicación</h2><button class="ib rd" data-a="cls" aria-label="Cerrar">${ic('x')}</button></div><label class="in">Tipo<select id="mt"><option>Pregunta</option><option>Consejo</option><option>Foto</option></select></label><label class="in">Título<input id="mh" type="text"></label><label class="in">Detalles<textarea id="mx"></textarea></label><button class="btn" data-a="pub">Publicar</button></div></div>`:''}`}
+const go=(t)=>{T=t;D=null;if(t!=='scan')sc={st:'idle'};render();scrollTo(0,0)};
+function care(p){S.days.includes(day())||S.days.push(day())}
+const A={
+login(){const u=$('#u').value.trim();if(!u)return toast('Escribe tu usuario');S.user=u;save();scr='main';T='home';render()},
+out(){S.user='';save();scr='login';render()},
+tab(t){go(t)},
+back(){D=null;render();scrollTo(0,0)},
+water(id){const p=S.plants.find(x=>x.id==id);if(!p||dn(p))return;p.last=Date.now();S.waters++;S.pts+=5;care();save();toast('+5 puntos · planta regada');render()},
+open(id){D={p:S.plants.find(x=>x.id==id)};render();scrollTo(0,0)},
+add(){S.plants.push({...D.p,id:Date.now(),last:0});S.pts+=20;save();D=null;T='home';sc={st:'idle'};toast('+20 puntos · planta agregada');render();scrollTo(0,0)},
+del(id){if(!confirm('¿Eliminar esta planta?'))return;S.plants=S.plants.filter(x=>x.id!=id);save();D=null;render()},
+gal(){$('#f2').click()},shot(){$('#f1').click()},
+stop(){ctl&&ctl.abort();sc={st:'idle'};render()},
+pick(i){D={p:{...CAT[i],img:sc.thumb},isNew:true};sc={st:'idle'};S.scans++;S.pts+=5;save();render();scrollTo(0,0)},
+flt(c){F=c;render()},
+like(id){const p=S.posts.find(x=>x.id==id);p.lk=p.lk?0:1;save();$('#fl').innerHTML=posts()},
+rep(id){O[id]=!O[id];$('#fl').innerHTML=posts()},
+send(id){const x=$('#r'+id).value.trim();if(!x)return;S.posts.find(p=>p.id==id).r.push({a:S.user,x});S.pts+=3;save();$('#fl').innerHTML=posts();toast('+3 puntos')},
+new(){M=1;render()},cls(){M=0;render()},
+pub(){const t=$('#mh').value.trim();if(!t)return toast('Escribe un título');S.posts.unshift({id:Date.now(),a:S.user,tag:$('#mt').value,t,x:$('#mx').value.trim(),ts:Date.now(),n:0,lk:0,r:[]});S.pts+=10;save();M=0;F='Todos';render();toast('+10 puntos · publicado')}};
+document.addEventListener('click',e=>{const a=e.target.closest('[data-a]');if(a&&A[a.dataset.a])A[a.dataset.a](a.dataset.v)});
+document.addEventListener('input',e=>{if(e.target.id==='q'){Q=e.target.value;$('#fl').innerHTML=posts()}});
+document.addEventListener('change',e=>{if((e.target.id==='f1'||e.target.id==='f2')&&e.target.files[0])identify(e.target.files[0])});
+const PROMPT='Identifica la planta de la foto. Responde SOLO con JSON, sin texto extra: {"ok":true,"name":"nombre común en español","sci":"nombre científico","conf":número 0-100,"w":cada cuántos días regarla (número),"l":"luz necesaria en pocas palabras","t":"rango de temperatura en °C","h":"humedad ambiental recomendada","b":["3 beneficios reales y modestos de tenerla, sin afirmaciones médicas"]}. Si la imagen no muestra una planta, responde {"ok":false}.';
+async function shrink(f){const bm=await createImageBitmap(f),mk=m=>{const r=Math.min(1,m/Math.max(bm.width,bm.height)),c=document.createElement('canvas');c.width=bm.width*r;c.height=bm.height*r;c.getContext('2d').drawImage(bm,0,0,c.width,c.height);return c};
+return{blob:await new Promise(r=>mk(640).toBlob(r,'image/jpeg',.8)),thumb:mk(160).toDataURL('image/jpeg',.7)}}
+async function identify(f){sc={st:'busy',url:URL.createObjectURL(f)};render();ctl=new AbortController();
+try{const{blob,thumb}=await shrink(f);sc.thumb=thumb;const sm=window.claude&&await claude.use('sample');
+if(!sm)throw{code:'na'};
+const r=await sm.json(PROMPT,{images:blob,modelTier:'quick',signal:ctl.signal});
+if(!r||!r.ok){sc={st:'err',url:sc.url,thumb,msg:'No pude reconocer una planta en la foto. Prueba con otra foto o elige de la lista.'};return render()}
+D={p:{n:r.name,s:r.sci,w:Math.max(1,Math.round(+r.w)||7),l:r.l,t:r.t,h:r.h,b:(r.b||[]).slice(0,3),img:thumb},isNew:true,conf:Math.round(+r.conf)||null};
+S.scans++;S.pts+=5;save();sc={st:'idle'};render();scrollTo(0,0);toast('+5 puntos · planta identificada')}
+catch(e){if(e&&e.code==='cancelled')return;sc={st:'err',url:sc.url,thumb:sc.thumb,msg:e&&e.code==='na'?'La identificación automática no está disponible aquí.':'No pude identificar la foto en este momento.'};render()}}
+render();setTimeout(()=>{scr=S.user?'main':'login';render()},1200);
+</script></body></html>
